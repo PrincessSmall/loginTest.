@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface buttonSection : UITableViewCell
-
+@property (nonatomic,strong) UIButton * leftBtn;
+@property (nonatomic,strong) UIButton * rightBtn;
 @end

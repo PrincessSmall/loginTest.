@@ -7,6 +7,10 @@
 //
 
 #import "buttonSection.h"
+@interface buttonSection ()
+//@property (nonatomic,strong) UIButton * leftBtn;
+//@property (nonatomic,strong) UIButton * rightBtn;
+@end
 
 @implementation buttonSection
 
@@ -14,6 +18,31 @@
     [super awakeFromNib];
     // Initialization code
 }
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self initLayout];
+    }
+    return self;
+}
+-(void)initLayout{
+    
+    [self.contentView addSubview:self.leftBtn];
+    [self.contentView addSubview:self.rightBtn];
+}
+-(UIButton *)leftBtn{
+    if (!_leftBtn) {
+        _leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+    }
+    return _leftBtn;
+}
+-(UIButton *)rightBtn{
+    if (!_rightBtn) {
+        _rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.contentView.frame.size.width, 0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+    }
+    return _rightBtn;
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

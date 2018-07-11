@@ -7,12 +7,34 @@
 //
 
 #import "secondSection.h"
+@interface secondSection ()
+//@property (nonatomic,strong) UILabel * label;
+
+@end
 
 @implementation secondSection
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+   self = [super initWithStyle:style  reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self initLayout];
+    }
+    return  self;
+}
+//-(UILabel *)label{
+//    if (!_label) {
+//        _label = [[UILabel alloc]init];
+//    }
+//    return _label;
+//}
+-(void)initLayout{
+    self.textLabel.textAlignment = NSTextAlignmentCenter;
+    self.backgroundColor = [UIColor whiteColor];
+    self.textLabel.textColor = [UIColor blackColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
