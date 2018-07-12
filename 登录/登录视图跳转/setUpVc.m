@@ -1,22 +1,24 @@
 //
-//  personalVc.m
+//  setUpVc.m
 //  login
 //
 //  Created by 李敏 on 2018/7/11.
 //  Copyright © 2018年 李敏. All rights reserved.
 //
 
-#import "personalVc.h"
+#import "setUpVc.h"
 
-@interface personalVc ()
+@interface setUpVc ()
 
 @end
 
-@implementation personalVc
+@implementation setUpVc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    设置背景色
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

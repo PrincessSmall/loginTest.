@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+//在这边声明属性，是为了外部可以调用
+@property (nonatomic,strong) NSString * nicheng;
+@property (nonatomic,strong) UITableView * loginVC;
 
 @end
 

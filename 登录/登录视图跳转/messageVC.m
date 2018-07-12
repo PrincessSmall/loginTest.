@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    设置界面背景色，因为跳转时候默认是黑色
+    self.view.backgroundColor = [UIColor whiteColor];
+//    设置title
+    self.title = @"消息通知";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

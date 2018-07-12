@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface imageCell : UITableViewCell
-@property (nonatomic,strong) UIImageView * headerIma;
+@property (nonatomic,strong) UIImageView * headerImage;
 @property (nonatomic,strong) UILabel * nichenLabel;
 @end

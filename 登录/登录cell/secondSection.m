@@ -18,6 +18,7 @@
     [super awakeFromNib];
     // Initialization code
 }
+//自定义cell实现的方法
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
    self = [super initWithStyle:style  reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -25,15 +26,13 @@
     }
     return  self;
 }
-//-(UILabel *)label{
-//    if (!_label) {
-//        _label = [[UILabel alloc]init];
-//    }
-//    return _label;
-//}
+
 -(void)initLayout{
+//    实现cell上面文字居中
     self.textLabel.textAlignment = NSTextAlignmentCenter;
+//    设置cell的背景颜色
     self.backgroundColor = [UIColor whiteColor];
+//   设置cell的文字颜色
     self.textLabel.textColor = [UIColor blackColor];
 }
 

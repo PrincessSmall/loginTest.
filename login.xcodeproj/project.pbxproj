@@ -21,6 +21,8 @@
 		EEE9210D20F5F85800FE6D0D /* messageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9210C20F5F85800FE6D0D /* messageVC.m */; };
 		EEE9211020F5F8FB00FE6D0D /* personalVc.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9210F20F5F8FB00FE6D0D /* personalVc.m */; };
 		EEE9211320F5F95D00FE6D0D /* setUpVc.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9211220F5F95D00FE6D0D /* setUpVc.m */; };
+		EEE9211620F6F65700FE6D0D /* editCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9211520F6F65700FE6D0D /* editCell.m */; };
+		EEE9211920F6F69800FE6D0D /* personalDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9211820F6F69800FE6D0D /* personalDataCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		EEE9210F20F5F8FB00FE6D0D /* personalVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = personalVc.m; sourceTree = "<group>"; };
 		EEE9211120F5F95D00FE6D0D /* setUpVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = setUpVc.h; sourceTree = "<group>"; };
 		EEE9211220F5F95D00FE6D0D /* setUpVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = setUpVc.m; sourceTree = "<group>"; };
+		EEE9211420F6F65700FE6D0D /* editCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editCell.h; sourceTree = "<group>"; };
+		EEE9211520F6F65700FE6D0D /* editCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = editCell.m; sourceTree = "<group>"; };
+		EEE9211720F6F69800FE6D0D /* personalDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalDataCell.h; sourceTree = "<group>"; };
+		EEE9211820F6F69800FE6D0D /* personalDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = personalDataCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		EEE920BE20F5A30400FE6D0D = {
 			isa = PBXGroup;
 			children = (
+				EEE9211A20F747C400FE6D0D /* 登录 */,
 				EEE920C920F5A30400FE6D0D /* login */,
 				EEE920E220F5A30500FE6D0D /* loginTests */,
 				EEE920ED20F5A30500FE6D0D /* loginUITests */,
@@ -119,22 +126,6 @@
 		EEE920C920F5A30400FE6D0D /* login */ = {
 			isa = PBXGroup;
 			children = (
-				EEE920CA20F5A30400FE6D0D /* AppDelegate.h */,
-				EEE920CB20F5A30400FE6D0D /* AppDelegate.m */,
-				EEE920CD20F5A30400FE6D0D /* ViewController.h */,
-				EEE920CE20F5A30400FE6D0D /* ViewController.m */,
-				EEE9211120F5F95D00FE6D0D /* setUpVc.h */,
-				EEE9211220F5F95D00FE6D0D /* setUpVc.m */,
-				EEE9210E20F5F8FA00FE6D0D /* personalVc.h */,
-				EEE9210F20F5F8FB00FE6D0D /* personalVc.m */,
-				EEE9210B20F5F85800FE6D0D /* messageVC.h */,
-				EEE9210C20F5F85800FE6D0D /* messageVC.m */,
-				EEE920FF20F5D8E100FE6D0D /* imageCell.h */,
-				EEE9210020F5D8E100FE6D0D /* imageCell.m */,
-				EEE9210520F5DDA400FE6D0D /* secondSection.h */,
-				EEE9210620F5DDA400FE6D0D /* secondSection.m */,
-				EEE9210820F5DF7600FE6D0D /* buttonSection.h */,
-				EEE9210920F5DF7600FE6D0D /* buttonSection.m */,
 				EEE920D020F5A30400FE6D0D /* Main.storyboard */,
 				EEE920D320F5A30500FE6D0D /* Assets.xcassets */,
 				EEE920D520F5A30500FE6D0D /* LaunchScreen.storyboard */,
@@ -160,6 +151,49 @@
 				EEE920F020F5A30500FE6D0D /* Info.plist */,
 			);
 			path = loginUITests;
+			sourceTree = "<group>";
+		};
+		EEE9211A20F747C400FE6D0D /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				EEE920CA20F5A30400FE6D0D /* AppDelegate.h */,
+				EEE920CB20F5A30400FE6D0D /* AppDelegate.m */,
+				EEE920CD20F5A30400FE6D0D /* ViewController.h */,
+				EEE920CE20F5A30400FE6D0D /* ViewController.m */,
+				EEE9211C20F748AC00FE6D0D /* 登录视图跳转 */,
+				EEE9211B20F7480E00FE6D0D /* 登录cell */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		EEE9211B20F7480E00FE6D0D /* 登录cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEE9211420F6F65700FE6D0D /* editCell.h */,
+				EEE9211520F6F65700FE6D0D /* editCell.m */,
+				EEE9211720F6F69800FE6D0D /* personalDataCell.h */,
+				EEE9211820F6F69800FE6D0D /* personalDataCell.m */,
+				EEE920FF20F5D8E100FE6D0D /* imageCell.h */,
+				EEE9210020F5D8E100FE6D0D /* imageCell.m */,
+				EEE9210520F5DDA400FE6D0D /* secondSection.h */,
+				EEE9210620F5DDA400FE6D0D /* secondSection.m */,
+				EEE9210820F5DF7600FE6D0D /* buttonSection.h */,
+				EEE9210920F5DF7600FE6D0D /* buttonSection.m */,
+			);
+			path = "登录cell";
+			sourceTree = "<group>";
+		};
+		EEE9211C20F748AC00FE6D0D /* 登录视图跳转 */ = {
+			isa = PBXGroup;
+			children = (
+				EEE9211120F5F95D00FE6D0D /* setUpVc.h */,
+				EEE9211220F5F95D00FE6D0D /* setUpVc.m */,
+				EEE9210E20F5F8FA00FE6D0D /* personalVc.h */,
+				EEE9210F20F5F8FB00FE6D0D /* personalVc.m */,
+				EEE9210B20F5F85800FE6D0D /* messageVC.h */,
+				EEE9210C20F5F85800FE6D0D /* messageVC.m */,
+			);
+			path = "登录视图跳转";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +333,10 @@
 				EEE920DA20F5A30500FE6D0D /* main.m in Sources */,
 				EEE9211020F5F8FB00FE6D0D /* personalVc.m in Sources */,
 				EEE9210720F5DDA400FE6D0D /* secondSection.m in Sources */,
+				EEE9211920F6F69800FE6D0D /* personalDataCell.m in Sources */,
 				EEE9210D20F5F85800FE6D0D /* messageVC.m in Sources */,
 				EEE920CC20F5A30400FE6D0D /* AppDelegate.m in Sources */,
+				EEE9211620F6F65700FE6D0D /* editCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
