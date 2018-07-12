@@ -7,6 +7,8 @@
 //
 
 #import "secondSection.h"
+#import "LoginModel.h"
+
 @interface secondSection ()
 //@property (nonatomic,strong) UILabel * label;
 
@@ -18,13 +20,27 @@
     [super awakeFromNib];
     // Initialization code
 }
-//自定义cell实现的方法
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
    self = [super initWithStyle:style  reuseIdentifier:reuseIdentifier];
     if (self) {
         [self initLayout];
     }
     return  self;
+}
+- (void)setUpUI:(NSInteger)inter andModel:(LoginModel *)model{
+    if (inter == 0) {
+        self.textLabel.text = model.message;
+    }else if (inter == 1){
+        self.textLabel.text = model.personal;
+    }else if (inter == 2){
+        self.textLabel.text = model.myPulish;
+    }else if (inter == 3){
+        self.textLabel.text = model.myPacket;
+    }else if (inter == 4){
+        self.textLabel.text = model.suggest;
+    }else if (inter == 5){
+        self.textLabel.text = model.connect;
+    }
 }
 
 -(void)initLayout{

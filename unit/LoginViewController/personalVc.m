@@ -16,7 +16,6 @@
 @end
 
 @implementation personalVc
-//设置cell的标识符
 static NSString * cell1 = @"editCell";
 static NSString * cell2 = @"nomallCell";
 static NSString * cell3 = @"personalCell";
@@ -24,25 +23,15 @@ static NSString * cell3 = @"personalCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    实例化viewController视图
-    ViewController * vc = [[ViewController alloc]init];
-//    设置title为viewController的nicheng属性
-    self.title = vc.nicheng;
-    NSLog(@"nicheng = %@",self.title);
-//    添加tableView视图
     [self.view addSubview:self.personalTBV];
-//    注册三种样式的cell
     [self.personalTBV registerClass:[editCell class] forCellReuseIdentifier:cell1];
     [self.personalTBV registerClass:[UITableViewCell class] forCellReuseIdentifier:cell2];
     [self.personalTBV registerClass:[personalDataCell class] forCellReuseIdentifier:cell3];
 }
-//懒加载，个人主页添加tableView视图
 -(UITableView *)personalTBV{
     if (!_personalTBV) {
         _personalTBV = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
-//        设置个人主页背景色
         _personalTBV.backgroundColor = [UIColor whiteColor];
-//        实现tableview委托协议
         _personalTBV.delegate = self;
         _personalTBV.dataSource = self;
     }
@@ -65,12 +54,7 @@ static NSString * cell3 = @"personalCell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         editCell * cell = [tableView dequeueReusableCellWithIdentifier:cell1];
-        cell.imaView.image = [UIImage imageNamed:@"cat1"];
-        [cell.fabiaoBtn setTitle:@"发表" forState:UIControlStateNormal];
-        [cell.fensiBtn setTitle:@"粉丝" forState:UIControlStateNormal];
-        [cell.guanzhuBtn setTitle:@"关注" forState:UIControlStateNormal];
-        [cell.editBtn setTitle:@"点击编辑资料" forState:UIControlStateNormal];
-        [cell.editBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+     
         return cell;
     }
     else if (indexPath.section == 1){

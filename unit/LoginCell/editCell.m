@@ -30,8 +30,12 @@
     [self.contentView addSubview: self.fensiBtn];
     [self.contentView addSubview:self.guanzhuBtn];
     [self.contentView addSubview:self.editBtn];
-    
-    
+    self.imaView.image = [UIImage imageNamed:@"cat1"];
+    [self.fabiaoBtn setTitle:@"发表" forState:UIControlStateNormal];
+    [self.fensiBtn setTitle:@"粉丝" forState:UIControlStateNormal];
+    [self.guanzhuBtn setTitle:@"关注" forState:UIControlStateNormal];
+    [self.editBtn setTitle:@"点击编辑资料" forState:UIControlStateNormal];
+    [self.editBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     
 }
 -(UIImageView *)imaView{

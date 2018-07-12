@@ -9,7 +9,7 @@
 #import "messageVC.h"
 
 @interface messageVC ()
-
+@property (nonatomic , strong)NSString * str1;
 @end
 
 @implementation messageVC
@@ -17,12 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    设置界面背景色，因为跳转时候默认是黑色
     self.view.backgroundColor = [UIColor whiteColor];
-//    设置title
-    self.title = @"消息通知";
+    self.title = self.str;
     
-    
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    if (self.block !=nil) {
+        self.block(@"喔喔噢噢我哦");
+    }
+}
+- (void)text:(newBlock)block{
+    self.block = block;
 }
 
 - (void)didReceiveMemoryWarning {

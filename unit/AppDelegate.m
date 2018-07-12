@@ -22,7 +22,7 @@
     ViewController * view = [[ViewController alloc]init];
     UINavigationController * naVc = [[UINavigationController alloc]initWithRootViewController:view];
 //    隐藏导航栏
-    [naVc setNavigationBarHidden:YES];
+//    [naVc setNavigationBarHidden:YES];
     [self.window setRootViewController:naVc];
     [self.window makeKeyAndVisible];
     return YES;

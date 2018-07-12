@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LoginModel;
 
 @interface secondSection : UITableViewCell
 
+- (void)setUpUI:(NSInteger)inter andModel:(LoginModel *)model;
 @end
